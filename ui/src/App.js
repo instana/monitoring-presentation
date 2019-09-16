@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NewPweet from './NewPweet';
-import Pweets from './Pweets';
+import NewTwoot from './NewTwoot';
+import Twoots from './Twoots';
 
 import 'antd/dist/antd.css';
 import './App.css';
@@ -9,8 +9,8 @@ import './App.css';
 export default function App() {
   return (
     <div className="app">
-      <NewPweet />
-      <Pweets />
+      <NewTwoot />
+      <Twoots />
     </div>
   );
 }

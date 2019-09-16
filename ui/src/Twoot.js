@@ -1,11 +1,11 @@
 import { Skeleton, Card, Avatar } from 'antd';
 import React from 'react';
 
-import './Pweet.css';
+import './Twoot.css';
 
-export default function Pweet({title, description, loading}) {
+export default function Twoot({title, description, loading}) {
   return (
-    <div className="pweet">
+    <div className="twoot">
       <Card>
         <Skeleton loading={loading} avatar active>
           <Card.Meta

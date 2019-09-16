@@ -1,27 +1,27 @@
 import { Form, Input, Button, Card } from 'antd';
 import React, {useState} from 'react';
 
-import {pweet} from './api';
+import {twoot} from './api';
 
-import './NewPweet.css';
+import './NewTwoot.css';
 
-export default function NewPweet() {
+export default function NewTwoot() {
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
 
   return (
-    <div className="newPweet">
-      <Card title="New Pweet">
+    <div className="newTwoot">
+      <Card title="New Twoot">
         <Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={e => {
           e.preventDefault();
-          pweet(author, content)
+          twoot(author, content)
             .then(() => window.location.reload(), () => window.location.reload());
         }}>
           <Form.Item label="Author">
             <Input value={author} onChange={e => setAuthor(e.target.value)}/>
           </Form.Item>
 
-          <Form.Item label="Pweet">
+          <Form.Item label="Twoot">
             <Input.TextArea
               value={content}
               onChange={e => setContent(e.target.value)}

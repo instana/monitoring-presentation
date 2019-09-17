@@ -1,4 +1,4 @@
-package com.instana.backend.controller;
+package com.instana.twoot.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.instana.backend.model.Twoot;
-import com.instana.backend.repository.TwootRepository;
+import com.instana.twoot.model.Twoot;
+import com.instana.twoot.repository.TwootRepository;
 
 @RestController
 public class TwittorController {

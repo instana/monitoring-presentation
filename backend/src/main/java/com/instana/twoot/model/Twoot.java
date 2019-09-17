@@ -1,4 +1,4 @@
-package com.instana.backend.model;
+package com.instana.twoot.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

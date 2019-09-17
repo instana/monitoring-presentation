@@ -5,18 +5,21 @@ import {twoot} from './api';
 
 import './NewTwoot.css';
 
-export default function NewTwoot() {
+export default function NewTwoot({onRefresh}) {
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
+  const onSubmit = e => {
+    e.preventDefault();
+    twoot(author, content).finally(() => {
+      setContent('');
+      onRefresh();
+    });
+  };
 
   return (
     <div className="newTwoot">
       <Card title="New Twoot">
-        <Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={e => {
-          e.preventDefault();
-          twoot(author, content)
-            .then(() => window.location.reload(), () => window.location.reload());
-        }}>
+        <Form labelCol={{ span: 5 }} wrapperCol={{ span: 12 }} onSubmit={onSubmit}>
           <Form.Item label="Author">
             <Input value={author} onChange={e => setAuthor(e.target.value)}/>
           </Form.Item>

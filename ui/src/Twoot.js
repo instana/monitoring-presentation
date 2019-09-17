@@ -3,16 +3,16 @@ import React from 'react';
 
 import './Twoot.css';
 
-export default function Twoot({title, description, loading}) {
+export default function Twoot({author, description, loading}) {
   return (
     <div className="twoot">
       <Card>
         <Skeleton loading={loading} avatar active>
           <Card.Meta
             avatar={
-              <Avatar src="https://lorempixel.com/200/200/abstract/" />
+              <Avatar src={`https://lorempixel.com/200/200/abstract/?author=${author}`} />
             }
-            title={title}
+            title={author}
             description={description}
           />
         </Skeleton>

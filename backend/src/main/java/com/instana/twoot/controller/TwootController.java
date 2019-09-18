@@ -13,14 +13,10 @@ import com.instana.twoot.model.Twoot;
 import com.instana.twoot.repository.TwootRepository;
 
 @RestController
-public class TwittorController {
-
-  private TwootRepository repository;
+public class TwootController {
 
   @Autowired
-  public TwittorController(TwootRepository repository) {
-    this.repository = repository;
-  }
+  private TwootRepository repository;
 
   @RequestMapping("/twoots")
   public List<Twoot> getAllTwoots() {
@@ -28,7 +24,7 @@ public class TwittorController {
   }
 
   @PutMapping("/twoot")
-  public @ResponseBody String updateStudent(@RequestBody Twoot twoot){
+  public String updateStudent(Twoot twoot){
     repository.save(twoot);
     return "ok";
   }

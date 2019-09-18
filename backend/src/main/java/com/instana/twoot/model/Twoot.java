@@ -12,10 +12,6 @@ public class Twoot {
   public String author;
   public String text;
 
-  public Twoot() {
-    // nop
-  }
-
   public Twoot(String author, String text) {
     this.author = author;
     this.text = text;

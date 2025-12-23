@@ -8,7 +8,7 @@
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +33,6 @@
     ]
   },
   "devDependencies": {
-    "proxrox": "^1.14.4"
+    "proxrox": "^2.1.1"
   }
 }

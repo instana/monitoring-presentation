@@ -5,10 +5,10 @@
   "dependencies": {
     "@instana/collector": "^1.72.0",
     "antd": "^3.23.2",
-    "express": "^4.17.1",
+    "express": "^4.22.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
